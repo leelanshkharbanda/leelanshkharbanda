@@ -1,120 +1,34 @@
-<p align="center">
-  <img src="header.svg" alt="System Identification Dashboard" width="100%" />
-</p>
+<img src="header.svg" alt="Leelansh Kharbanda, ECE at IIIT Delhi, with a modulated waveform and QPSK constellation" width="100%">
 
-<p align="center">
-  <a href="mailto:leelansh24319@iiitd.ac.in"><img src="https://img.shields.io/badge/leelansh24319%40iiitd.ac.in-0A0A0A?style=flat-square&logo=gmail&logoColor=737373" alt="Email" /></a>&nbsp;&nbsp;
-  <a href="https://linkedin.com/in/leelansh-kharbanda"><img src="https://img.shields.io/badge/Leelansh_Kharbanda-0A0A0A?style=flat-square&logo=linkedin&logoColor=737373" alt="LinkedIn" /></a>&nbsp;&nbsp;
-  <a href="https://breaking-byts.github.io/Modulation-Studio/"><img src="https://img.shields.io/badge/Modulation_Studio-0A0A0A?style=flat-square&logo=firefox-browser&logoColor=00E5FF" alt="Live Demo" /></a>
-</p>
+# Leelansh Kharbanda
 
----
+B.Tech in Electronics and Communication Engineering at IIIT Delhi. Most of my projects start with a signal or an instruction set and end with something you can run: a wireless channel you can watch, a RISC-V program you can trace, a modem you can listen to.
 
-### SYS_INFO :: PRIMARY_OPERATOR
+[Email](mailto:leelansh24319@iiitd.ac.in) · [LinkedIn](https://linkedin.com/in/leelansh-kharbanda) · [Modulation Studio](https://breaking-byts.github.io/Modulation-Studio/) · [Tasveer](https://breaking-byts.github.io/tasveer/)
 
-> B.Tech Electronics and Communication Engineering (ECE)  
-> **Indraprastha Institute of Information Technology, Delhi (IIIT-Delhi)**
+Tools I keep coming back to: C, C++, Rust, Elixir, Python, TypeScript, Java.
 
-Hardware-software co-design, bare-metal computing, and on-device machine learning. Specializing in low-overhead telemetry pipelines, high-performance signal rendering, and real-time execution environments.
+## What I've built
 
----
+| Project | What it does |
+| --- | --- |
+| [Chronos-DSP](https://github.com/breaking-byts/Chronos-DSP) | A 3D wireless channel you can drive in a browser. Line of sight, specular reflections, knife-edge diffraction, Doppler and material loss feed a QPSK baseband with seeded AWGN and BER plots. Elixir and Phoenix run the control plane; a Rust NIF does the DSP, with a pure Elixir fallback. There is a JSON API and CSV export for running it headless. |
+| [MoE Memory Wall](https://github.com/breaking-byts/MoE-Memory-Wall-CA-Project) | A course project on serving Mixtral-8x7B when the experts do not fit in HBM. The predictor is training-free and reached 0.943 top-2 recall; the prefetcher gave 1.27-1.28x over on-demand plus LRU when HBM was tight. It is all simulated, so it runs without a GPU. |
+| [Life OS](https://github.com/breaking-byts/Life-Os) | A desktop app that keeps your data on your machine. Tauri 2, React 19 and SQLite underneath; ONNX Runtime for local inference and LanceDB for semantic memory, behind 80+ command handlers. |
+| [Modulation Studio](https://github.com/breaking-byts/Modulation-Studio) | Eight digital modulation schemes with FFT and constellation views, adjustable channel impairment, side-by-side comparison, presets and CSV/PNG export. [Live demo](https://breaking-byts.github.io/Modulation-Studio/). |
+| [RV32I sandbox](https://github.com/breaking-byts/RISC-V-Assembler-and-Simulator) | A two-pass assembler and simulator for the RISC-V RV32I subset, with label resolution, all 32 registers, and a trace of PC and register state after each instruction. |
+| [Tasveer](https://github.com/breaking-byts/tasveer) | The website for IIIT Delhi's media society. Static files, no build step, self-hosted animation libraries, and a reduced-motion path that keeps the content readable. [Live site](https://breaking-byts.github.io/tasveer/). |
 
-### CURRENT_RESEARCH
+## Research
 
-<table>
-  <tr>
-    <td width="18%" valign="top"><strong>TARGET</strong></td>
-    <td width="82%"><strong>Bare-Metal Anomaly Detection</strong> — Advised by Dr. Sujay Deb</td>
-  </tr>
-  <tr>
-    <td valign="top">PIPELINE</td>
-    <td>End-to-end LSTM-based sequencing and profiling on the 400K-sample RaDaR dataset. ~0.90 balanced accuracy for real-time anomaly detection.</td>
-  </tr>
-  <tr>
-    <td valign="top">OPTIMIZE</td>
-    <td>Minimizing bare-metal execution latency and CPU profiling overhead through feature extraction pipeline tuning.</td>
-  </tr>
-</table>
+Bare-metal anomaly detection, advised by Dr. Sujay Deb. I sequence CPU telemetry from the 400K-sample RaDaR dataset through an LSTM, getting about 0.90 balanced accuracy, and spend the rest of the time on the feature-extraction pipeline that decides how much this costs on the device itself.
 
-<br>
+HPC-Boost looks at the same problem from the hardware security side: LSTM forecasters and classifiers over performance-counter logs to catch runtime attacks, with XGBoost and Isolation Forest used to drop telemetry channels that do not help.
 
-<table>
-  <tr>
-    <td width="18%" valign="top"><strong>TARGET</strong></td>
-    <td width="82%"><strong>Hardware Security &amp; CPU Telemetry</strong> — HPC-Boost</td>
-  </tr>
-  <tr>
-    <td valign="top">PIPELINE</td>
-    <td>Sequential LSTM forecasters and classifiers trained on large-scale CPU performance logs to intercept runtime hardware attacks.</td>
-  </tr>
-  <tr>
-    <td valign="top">OPTIMIZE</td>
-    <td>Hybrid feature-selection oracle using XGBoost and Isolation Forest to prune irrelevant telemetry channels.</td>
-  </tr>
-</table>
+## Around campus
 
----
+I coordinate Tasveer, the media society here, and shoot for it as well. The crew page pairs every portrait with the same person as a kid. That is my favourite part of the site and the reason I care about the small details of an editorial layout.
 
-### SYSTEM_COMPONENTS
+## Open to
 
-<table>
-  <tr>
-    <td width="22%" valign="top"><strong>LOW_LEVEL</strong></td>
-    <td width="78%"><img src="https://img.shields.io/badge/C-0A0A0A?style=flat-square&logo=c&logoColor=E5E5E5" alt="C" /> <img src="https://img.shields.io/badge/C++-0A0A0A?style=flat-square&logo=c%2B%2B&logoColor=E5E5E5" alt="C++" /> <img src="https://img.shields.io/badge/Rust-0A0A0A?style=flat-square&logo=rust&logoColor=E5E5E5" alt="Rust" /> <img src="https://img.shields.io/badge/RISC--V-0A0A0A?style=flat-square" alt="RISC-V" /></td>
-  </tr>
-  <tr>
-    <td valign="top"><strong>ML_INFERENCE</strong></td>
-    <td><img src="https://img.shields.io/badge/Python-0A0A0A?style=flat-square&logo=python&logoColor=E5E5E5" alt="Python" /> <img src="https://img.shields.io/badge/ONNX_Runtime-0A0A0A?style=flat-square&logo=onnx&logoColor=E5E5E5" alt="ONNX" /> <img src="https://img.shields.io/badge/Scikit--Learn-0A0A0A?style=flat-square&logo=scikit-learn&logoColor=E5E5E5" alt="Scikit-Learn" /> <img src="https://img.shields.io/badge/XGBoost-0A0A0A?style=flat-square" alt="XGBoost" /> <img src="https://img.shields.io/badge/LanceDB-0A0A0A?style=flat-square" alt="LanceDB" /></td>
-  </tr>
-  <tr>
-    <td valign="top"><strong>UI_RENDERING</strong></td>
-    <td><img src="https://img.shields.io/badge/TypeScript-0A0A0A?style=flat-square&logo=typescript&logoColor=E5E5E5" alt="TypeScript" /> <img src="https://img.shields.io/badge/React_19-0A0A0A?style=flat-square&logo=react&logoColor=E5E5E5" alt="React" /> <img src="https://img.shields.io/badge/Tauri-0A0A0A?style=flat-square&logo=tauri&logoColor=E5E5E5" alt="Tauri" /> <img src="https://img.shields.io/badge/Canvas_API-0A0A0A?style=flat-square" alt="Canvas" /></td>
-  </tr>
-  <tr>
-    <td valign="top"><strong>TOOLCHAIN</strong></td>
-    <td><img src="https://img.shields.io/badge/Git-0A0A0A?style=flat-square&logo=git&logoColor=E5E5E5" alt="Git" /> <img src="https://img.shields.io/badge/Docker-0A0A0A?style=flat-square&logo=docker&logoColor=E5E5E5" alt="Docker" /> <img src="https://img.shields.io/badge/SQLite-0A0A0A?style=flat-square&logo=sqlite&logoColor=E5E5E5" alt="SQLite" /> <img src="https://img.shields.io/badge/MySQL-0A0A0A?style=flat-square&logo=mysql&logoColor=E5E5E5" alt="MySQL" /></td>
-  </tr>
-</table>
-
----
-
-### DEPLOYED_SUBSYSTEMS
-
-<table>
-  <tr>
-    <td width="25%" valign="top"><strong><a href="https://github.com/breaking-byts/Life-Os">Life-OS</a></strong></td>
-    <td width="75%">Privacy-first desktop companion with on-device ML recommendations. Sub-10ms personalization latency via ONNX Runtime inference and LanceDB vector search. Asynchronous IPC pipeline across 80+ Tauri handlers.<br><em>Tauri · React 19 · ONNX Runtime · LanceDB</em></td>
-  </tr>
-  <tr>
-    <td valign="top"><strong><a href="https://github.com/breaking-byts/Modulation-Studio">Modulation Studio</a></strong></td>
-    <td>Framework-free DSP simulator for 8 digital modulation schemes. Constant 60 FPS FFT rendering via custom double-buffered Canvas pipeline with debounced event listeners.<br><em>TypeScript · HTML5 Canvas · Web Audio</em></td>
-  </tr>
-  <tr>
-    <td valign="top"><strong><a href="https://github.com/breaking-byts/RISC-V-Assembler-and-Simulator">RV32I Sandbox</a></strong></td>
-    <td>Two-pass assembler and execution environment for the RISC-V RV32I ISA. Compiler-like parser resolves conditional branches and labels to binary. Visual register-state tracer.<br><em>Python</em></td>
-  </tr>
-  <tr>
-    <td valign="top"><strong><a href="https://github.com/breaking-byts/AP_Project">University ERP</a></strong></td>
-    <td>Multi-tier OOD application across 76 classes (4.5K+ LOC). Dual-database architecture with role-based access control. Thread-safe concurrent data execution validated by JUnit suites.<br><em>Java · SQLite · JUnit</em></td>
-  </tr>
-</table>
-
----
-
-### SYSTEM_DIAGNOSTICS
-
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=breaking-byts&theme=github_dark" alt="GitHub Stats" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=breaking-byts&theme=github_dark" alt="Top Languages" />
-</p>
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=breaking-byts&theme=dark&hide_border=true&background=0A0A0A&ring=00E5FF&fire=FF3366&currStreakLabel=E5E5E5" alt="GitHub Streak" />
-</p>
-
----
-
-### ANCILLARY_FUNCTIONS
-
-- `photography` — Coordinator at **Tasveer**, The Media Society of IIITD
-- `reverse_engineering` — Binary analysis, memory structure traversal, and assembly tracing
-- `fitness` — Weight-lifting and cricket
+Research collaborations on edge inference, signal pipelines and hardware telemetry. If you are working on something in that space, or on photography and editorial design, I would like to hear about it.
